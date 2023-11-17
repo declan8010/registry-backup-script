@@ -9,7 +9,16 @@ set date=%datetime:~6,2%-%month%-%datetime:~0,4%
 :: Prompt the user for the backup path
 set /p backup_path="Enter the path where you want the backup to be saved: "
 
+:: Check if the file already exists
+if exist "%backup_path%\Registry_Backup_%date%.reg" (
+    set /p overwrite="A file with the same name already exists. Do you want to overwrite it? (y/n): "
+    if /i "%overwrite%"=="n" (
+        echo Backup cancelled.
+        goto :eof
+    )
+)
+
 :: Export the registry
-regedit /E "%backup_path%\registry_backup_%date%.reg"
+regedit /E "%backup_path%\Registry_Backup_%date%.reg"
 
 endlocal
