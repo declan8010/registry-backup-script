@@ -1,6 +1,6 @@
 # Registry Backup Script
 
-This .BAT script renames files in sequential order.
+This .BAT script exports the Windows registry
 
 ## Features
 
