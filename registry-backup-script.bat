@@ -30,7 +30,7 @@ if exist "%backup_path%\Registry_Backup_%date%.reg" (
     )
 )
 
-echo Please wait while the backup is being taken. This may take some time.
+echo Please wait while the backup is being taken. This may take some time...
 :: Export the registry
 regedit /E "%backup_path%\Registry_Backup_%date%.reg"
 echo.
