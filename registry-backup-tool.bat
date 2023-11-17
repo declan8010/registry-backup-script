@@ -1,5 +1,17 @@
 @echo off
-setlocal
+
+ECHO.
+ECHO ############################################################
+ECHO ##                                                        ## 
+ECHO ##               Registry Backup Script                   ##
+ECHO ##              Version 1.0.0 17/11/2023                  ##
+ECHO ##                                                        ##
+ECHO ##  https://github.com/declan1080/registry-backup-script  ##
+ECHO ##                                                        ## 
+ECHO ############################################################
+ECHO.
+
+setlocal EnableDelayedExpansion
 
 :: Prompt the user for the backup path
 set /p backup_path="Enter the path where you want the backup to be saved: "
